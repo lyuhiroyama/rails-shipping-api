@@ -1,10 +1,20 @@
 class ShipmentsController < ApplicationController
   def index
     @shipments = Shipment.all
+
+    respond_to do |format|
+      format.html
+      format.json { render json: @shipments }
+    end
   end
 
   def show
     @shipment = Shipment.find(params[:id])
+
+    respond_to do |format|
+      format.html
+      format.json { render json: @shipment }
+    end
   end
 
   def new

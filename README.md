@@ -1,24 +1,7 @@
-# README
+# About the project
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- A Rails application that manages shipments and exposes them via both HTML views & a JSON API.
+- Users can view a list of shipments, see details for individual shipments, create new shipments, edit existing shipments, and delete shipments through the web interface.
+- Each shipment has attributes such as tracking number, status, origin, and destination.
+- The app includes full RESTful routes for shipments, allowing both browser-based interactions and API requests.
+- JSON API endpoints allow external clients to fetch shipment data (index and show) using tools like RestClient.

@@ -1,0 +1,4 @@
+<h1>Edit Shipment</h1>
+<%= render 'form', shipment: @shipment %>
+
+<%= link_to 'Delete Shipment', @shipment, method: :delete, data: { confirm: 'Are you sure?' } %>

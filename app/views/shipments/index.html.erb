@@ -1,0 +1,37 @@
+<h2>Shipments-API</h2>
+
+<% @shipments.each do |shipment| %>
+    <div>
+        <label>Shipment ID:</label>
+        <%= shipment.id %>
+    </div>
+    <div>
+        <label>Shipment Tracking Number:</label>
+        <%= shipment.tracking_number %>
+    </div>
+    <div>
+        <label>Shipment Status:</label>
+        <%= shipment.status %>
+    </div>
+    <div>
+        <label>Shipment Origin:</label>
+        <%= shipment.origin %>
+    </div>
+    <div>
+        <label>Shipment Destination:</label>
+        <%= shipment.destination %>
+    </div>
+    <div>
+        <%= link_to 'Show', shipment %>
+    </div>
+    <div>
+        <%= link_to 'Edit', edit_shipment_path(shipment) %>
+    </div>
+    <div>
+        <%= link_to 'Delete', shipment, method: :delete, data: { turbo_method: :delete }  %>
+    </div>
+    <br>
+<% end %>
+
+<br>
+<%= link_to 'New Shipment', new_shipment_path %>

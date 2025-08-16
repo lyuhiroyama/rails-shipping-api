@@ -1,0 +1,26 @@
+<h2>Your Shipment</h2>
+
+
+<div>
+    <label>Shipment ID:</label>
+    <%= @shipment.id %>
+</div>
+<div>
+    <label>Shipment Tracking Number:</label>
+    <%= @shipment.tracking_number %>
+</div>
+<div>
+    <label>Shipment Status:</label>
+    <%= @shipment.status %>
+</div>
+<div>
+    <label>Shipment Origin:</label>
+    <%= @shipment.origin %>
+</div>
+<div>
+    <label>Shipment Destination:</label>
+    <%= @shipment.destination %>
+</div>
+
+<%= link_to 'Delete Shipment', @shipment, method: :delete, data: { confirm: 'Are you sure?' } %>
+<%= link_to 'Back to Home', root_path %>
